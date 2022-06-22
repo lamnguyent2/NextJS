@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -20,18 +21,18 @@ const Home: NextPage = () => {
                     <code className={styles.code}>pages/index.tsx</code>
                 </p>
                 <div className={styles.grid}>
-                    <a href="/users/login" className={styles.card} target="_blank">
-                        <h2>Login &rarr;</h2>
-                    </a>
-                    <a href="/users/register" className={styles.card} target="_blank">
-                        <h2>Register &rarr;</h2>
-                    </a>
-                    <a href="/users/profile/1" className={styles.card} target="_blank">
-                      <h2>Profile by id &rarr;</h2>
-                    </a>
-                    <a href="/users/profile/1/nextjs" className={styles.card} target="_blank">
-                        <h2>Profile by slug &rarr;</h2>
-                    </a>
+                    <Link href="/users/login">
+                        <a className={styles.card}><h2>Login &rarr;</h2></a>
+                    </Link>
+                    <Link href="/users/register">
+                        <a className={styles.card}><h2>Register &rarr;</h2></a>
+                    </Link>
+                    <Link href="/users/profile/1">
+                        <a className={styles.card}><h2>Profile by id &rarr;</h2></a>
+                    </Link>
+                    <Link href="/users/profile/1/nextjs">
+                        <a className={styles.card}><h2>Profile by slug &rarr;</h2></a>
+                    </Link>
                 </div>
             </main>
         </div>
